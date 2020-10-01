@@ -1,9 +1,12 @@
+<% if current_user == nil && !current_user? %>
+  <%= link_to "Home", '/welcome' %>
+  <%= link_to 'Sign Up', new_user_path %>
+<% end %>
 <h1>Login to Private Event</h1>
-
 <%= form_for :login do |f| %>
   <div>
     <%= f.label :username %>
-    <%= f.text_field :username, autofocus: true %>
+    <%= f.text_field :username %>
   </div>
   <div>
     <%= f.submit "Log In" %>

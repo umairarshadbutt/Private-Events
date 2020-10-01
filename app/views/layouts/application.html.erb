@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrivateEvent</title>
+    <title>PrivateEvents</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,8 @@
   </head>
 
   <body>
+  <%= render 'layouts/header' %>
+    <p class="flash"><%= flash.notice %></p>
     <%= yield %>
   </body>
 </html>

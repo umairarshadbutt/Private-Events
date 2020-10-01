@@ -1,0 +1,7 @@
+
+<% if current_user? %>
+  <%= link_to "All events", events_path %>
+  <%= link_to "New event", new_event_path %>
+  <%= link_to "#{current_user.full_name}", user_path(current_user) %>
+  <%= link_to "Log Out", '/logout', method: :delete %>
+<% end %>

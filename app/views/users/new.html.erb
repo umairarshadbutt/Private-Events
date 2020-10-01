@@ -1,15 +1,24 @@
+<% if current_user == nil && !current_user? %>
+  <%= link_to "Home", '/welcome' %>
+  <%= link_to 'Log In', login_path %> 
+<% end %>
+<h1>New User</h1>
 
-<%= form_for @user do|f|%>
-    <p>
-        <%= f.label :username%><br>
-        <%= f.text_field :username%>
-    </p>
-    <p>
-        <%= f.label :password%><br>
-        <%= f.password_field :password%>
-    </p>
-    <p>
-    <%= f.submit "Okay" %>
-    </p>
-<%end%>
+<%= form_with(model: @user, local: true) do |f| %>
+  <div>
+    <%= f.label :full_name %><br />
+    <%= f.text_field :full_name, placeholder: "Enter your full name" %>
+  </div>
+  <div>
+    <%= f.label :username %><br />
+    <%= f.text_field :username, placeholder: "Enter your username" %>
+  </div>
+  <div>
+     <%= f.label :email %><br />
+     <%= f.text_field :email , placeholder: "Your email" %>
+  </div>
 
+  <div class="action">
+    <%= f.submit 'Sign Up' %>
+  </div>
+<% end %>
