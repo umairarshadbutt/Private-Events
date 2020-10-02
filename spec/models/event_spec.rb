@@ -14,5 +14,11 @@ RSpec.describe Event, type: :model do
     event.event_date = nil
     expect(event).to_not be_valid
   end
-
+  it 'All parameters must have values' do
+    event.title = 'Test title'
+    event.description = 'Title for testing purpose'
+    event.event_date = '2020-10-22'
+    event.creator_id = user.id
+    expect(event).to be_valid
+  end
 end

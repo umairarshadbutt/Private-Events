@@ -12,5 +12,4 @@ RSpec.describe 'Event', type: :feature do
     find("input[type='submit']").click
     expect(page).to have_content(/Event created successfully/i)
   end
-
 end
