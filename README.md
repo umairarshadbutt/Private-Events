@@ -9,6 +9,8 @@
 </div>
 <p align="center">The goal of this project is to understand and implementation of ActiveRecord’s associations </p>
 
+![Screenshot](https://github.com/umairarshadbutt/Private-Events/blob/feature/private-event/PrivateEvent.png)
+
 ## Built With
 
 - Ruby on Rails
