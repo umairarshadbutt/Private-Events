@@ -9,7 +9,6 @@
 </div>
 <p align="center">The goal of this project is to understand and implementation of ActiveRecord’s associations </p>
 
-
 ## Built With
 
 - Ruby on Rails
@@ -36,6 +35,7 @@ To get a local copy up and running follow these simple example steps.
 - Install gems `bundle install`
 - Install Yarn `yarn install --check-files` 
 - Run `rails server`
+- Run for test `rails test`
 
 ## Authors
 
