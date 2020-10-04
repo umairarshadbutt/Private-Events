@@ -22,13 +22,6 @@ RSpec.describe 'User', type: :feature do
     find("input[type='submit']").click
     expect(page).to have_content(/You have logged in successfully/i)
   end
-  it 'It should NOT log in with parameter other than username' do
-    User.create(full_name: 'ali', username: 'ali', email: 'ali@email.com')
-    visit login_path
-    fill_in 'login_username', with: 'ali'
-    find("input[type='submit']").click
-    expect(page).to have_content(/Login failed. Something went wrong/i)
-  end
   it 'It should log user out successfully' do
     User.create(full_name: 'ali', username: 'ali', email: 'ali@email.com')
     visit login_path
