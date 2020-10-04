@@ -1,5 +1,5 @@
-<% if current_user? %>
-  <h3 class="text-center">User profile page for: <%= @user.full_name if @user %></h3>
+<% if check %>
+  <h3 class="text-center">User profile page for: <%= @user.full_name %></h3>
     <div class="container">
     <p>Created events: </p>
     <table class="table">
