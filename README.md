@@ -37,7 +37,7 @@ To get a local copy up and running follow these simple example steps.
 - Install gems `bundle install`
 - Install Yarn `yarn install --check-files` 
 - Run `rails server`
-- Run for test `rails test`
+- Run for test `rspec`
 
 ## Authors
 
