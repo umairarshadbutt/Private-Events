@@ -3,7 +3,7 @@
   <p><strong>Event date: </strong><%= @event.event_date %></p>
   <p><strong>Description: </strong><%= @event.description %></p>
 
-  <% if @event.attendees.empty? %>
+  <% if eventAttandance %>
     <p>No attandees</p>
   <% else %>
     <strong>Attendees:</strong>

@@ -1,4 +1,4 @@
-<% if validate %>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,17 +14,5 @@
       </span>
     </div>
   </nav>
-<% end %>
-<h1 class="text-center">Welcome to Private Event App</h1>
-  <% if current_user %>
 
-  <%= "Logged in as #{current_user.username}" %> |  <%= button_to "Log Out", '/logout', method: :delete %>
-  <%= link_to current_user.username, user_path(current_user.id) %>
-  <%= button_to "Log Out", '/logout', method: :delete %>
-    
-  <%# <% else %>
-    <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', new_user_path %>
-     %>
-  <% end %>
-  <hr>
 
