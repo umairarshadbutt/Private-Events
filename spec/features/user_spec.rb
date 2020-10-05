@@ -30,4 +30,11 @@ RSpec.describe 'User', type: :feature do
     click_link('Log Out')
     expect(page).to have_content(/You have logged out successfully/i)
   end
+  it 'It should NOT log in with parameter other than username' do
+    User.create(full_name: 'ali', username: 'ali', email: 'ali@email.com')
+    visit login_path
+    fill_in 'login_username', with: 'ali'
+    find("input[type='submit']").click
+    expect(page).to have_content(/Login failed. Something went wrong/i)
+  end
 end
