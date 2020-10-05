@@ -1,0 +1,22 @@
+
+<% if check %>
+  <h1>Create Event</h1>
+
+  <%= form_for @event do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div><br/>
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div><br/>
+    <div>
+      <%= f.label :event_date %>
+      <%= f.date_field :event_date %>
+    </div><br/>
+    <div>
+      <%= f.submit "Create Event" %>
+    </div>
+  <% end %>
+<% end %>

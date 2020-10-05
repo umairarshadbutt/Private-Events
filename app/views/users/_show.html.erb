@@ -1,0 +1,56 @@
+<% if check %>
+  <h3 class="text-center">User profile page for: <%= @user.full_name %></h3>
+    <div class="container">
+    <p>Created events: </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Event name</th>
+          <th>Description</th>
+          <th>Event Date</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr><% @created_events.each do |e| %></tr>
+            <td><%= e.title %></td>
+            <td><%= e.description %></td>
+            <td><%= e.event_date %></td>
+            <% end %>
+      </tbody>
+    </table>
+    <p>Upcoming events:</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event name</th>
+            <th>Description</th>
+            <th>Event Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr><% @upcoming_events.each do |e| %></tr>
+              <td><%= e.title %></td>
+              <td><%= e.description %></td>
+              <td><%= e.event_date %></td>
+            <% end %>
+        </tbody>
+      </table>
+    <p>Previous events: </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event name</th>
+            <th>Place</th>
+            <th>Event Date</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr><% @previous_events.each do |e| %></tr>
+              <td><%= e.title %></td>
+              <td><%= e.description %></td>
+              <td><%= e.event_date %></td>
+            <% end %>
+        </tbody>
+      </table>
+  </div>
+<% end %>
